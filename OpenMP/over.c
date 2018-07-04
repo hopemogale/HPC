@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<chrono>
+//#include<chrono>
 #include<omp.h>
 
 void hello_openmp()

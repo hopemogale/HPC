@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=24
+#PBS -o test_24.o
+#PBS -e test_24.e
+#PBS -P WCHPC
+#PBS -q smp
+#PBS -l walltime=0:30:00
+module purge
+module load gcc/5.1.0
+module load chpc/openmpi/2.0.2/gcc-5.1.0
+hostname
+time mpirun -np 24 /home/student09/hpc/OpenMP/over
