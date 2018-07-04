@@ -1,17 +1,15 @@
-#include<iostream>
+#include<stdio.h>
 #include<chrono>
 #include<omp.h>
-using namespace std;
 
 void hello_openmp()
 {
-  cout << "Hello, OpenMP"
+  #pragma omp parallel
+  printf("Testing OpenMP Threads \n");
 }
 
-int int main(int argc, char const *argv[]) {
+int main() {
   /* code */
   hello_openmp();
-
-  getchar();
   return 0;
 }
